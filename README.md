@@ -1,3 +1,7 @@
+# react-quiz
+
+The React Quiz project is a simple and engaging quiz app built using React, leveraging the power of the useReducer hook for efficient state management. The application allows users to take a quiz, answer multiple-choice questions, and see their results at the end.
+
 The key feature of this app is the use of the useReducer hook, which enhances state management by providing a more predictable way of handling complex state logic. This approach allows for better control over quiz states, such as user answers, current question index, and final score.
 
 ## Key Features:
