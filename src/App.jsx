@@ -89,7 +89,7 @@ function App() {
     dispatch,
   ] = useReducer(reducer, initialState);
   useEffect(() => {
-    fetch("http://localhost:3000/questions")
+    fetch("https://my-json-server.typicode.com/eszw10/react-quiz/questions")
       .then((res) => res.json())
       .then((data) => dispatch({ type: "dataReceived", payload: data }))
       .catch((err) => dispatch({ type: "dataFailed" }));
