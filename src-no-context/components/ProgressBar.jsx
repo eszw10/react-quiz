@@ -1,9 +1,6 @@
 import PropTypes from "prop-types";
-import { useQuiz } from "../context/QuizContext";
 
-function ProgressBar({ maxPoints }) {
-  const { questions, index, answer, points } = useQuiz();
-  const numQuestions = questions.length;
+function ProgressBar({ index, numQuestions, points, maxPoints, answer }) {
   return (
     <header className="progress">
       <progress
@@ -21,7 +18,11 @@ function ProgressBar({ maxPoints }) {
 }
 
 ProgressBar.propTypes = {
+  index: PropTypes.number,
+  numQuestions: PropTypes.number,
+  points: PropTypes.number,
   maxPoints: PropTypes.number,
+  answer: PropTypes.number,
 };
 
 export default ProgressBar;

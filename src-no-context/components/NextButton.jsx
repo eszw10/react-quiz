@@ -1,9 +1,6 @@
-import { useQuiz } from "../context/QuizContext";
+import PropTypes from "prop-types";
 
-function NextButton() {
-  const { questions, answer, index, dispatch } = useQuiz();
-  const numQuestions = questions.length;
-
+function NextButton({ dispatch, answer, numQuestions, index }) {
   if (answer === null) return null;
   if (index < numQuestions - 1)
     return (
@@ -21,5 +18,12 @@ function NextButton() {
       </button>
     );
 }
+
+NextButton.propTypes = {
+  dispatch: PropTypes.func,
+  answer: PropTypes.number,
+  numQuestions: PropTypes.number,
+  index: PropTypes.number,
+};
 
 export default NextButton;

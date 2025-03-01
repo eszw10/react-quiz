@@ -1,9 +1,6 @@
 import PropTypes from "prop-types";
-import { useQuiz } from "../context/QuizContext";
 
-function Options({ question }) {
-  const { dispatch, answer } = useQuiz();
-
+function Options({ question, dispatch, answer }) {
   const hasAnswered = answer !== null;
   return (
     <div className="options">
@@ -29,6 +26,8 @@ function Options({ question }) {
 
 Options.propTypes = {
   question: PropTypes.object,
+  dispatch: PropTypes.func,
+  answer: PropTypes.number,
 };
 
 export default Options;
